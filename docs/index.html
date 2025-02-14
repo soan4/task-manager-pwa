@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <meta name="theme-color" content="#4b7c9b" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="タスク管理" />
-  <link rel="manifest" href="/task-manager-pwa/manifest.json" />
-  <title>業務タスク管理</title>
-  <script type="module" crossorigin src="/task-manager-pwa/assets/index-dxIH6E0_.js"></script>
-  <link rel="stylesheet" crossorigin href="/task-manager-pwa/assets/index-CgepRElv.css">
-</head>
-<body>
-  <div id="root"></div>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Task Manager</title>
+    <script type="text/javascript">
+      var pathSegmentsToKeep = 1;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+  </body>
 </html>
