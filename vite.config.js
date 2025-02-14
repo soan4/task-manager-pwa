@@ -6,5 +6,9 @@ export default defineConfig({
   base: '/task-manager-pwa/',
   build: {
     outDir: 'docs'
+  },
+  appType: 'spa',
+  server: {
+    historyApiFallback: true
   }
 })
