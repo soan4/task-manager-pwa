@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* フォント設定 */
+body {
+  font-family: 'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+}
+
+/* カスタムスタイル */
+.task-card {
+  @apply bg-white rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow;
+}
